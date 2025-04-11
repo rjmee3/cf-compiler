@@ -10,7 +10,7 @@ static string::const_iterator start;
 static int line = 1;
 
 static void addToken(TokenType type, const string& source) {
-   tokens.emplace_back(type, source, line);
+   tokens.emplace_back(type, string(start, current), line);
 }
 
 static void scanToken(const string& source) {
