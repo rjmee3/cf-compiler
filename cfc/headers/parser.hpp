@@ -2,8 +2,16 @@
 #pragma once
 #include "ast.hpp"
 #include "lexer.hpp"
+#include <stdexcept>
 
 using namespace std;
+
+class ParserException : public runtime_error {
+public:
+   int line, column;
+   ParserException(const string& message, int line, int column)
+                : runtime_error(message), line(line), column(column) {}
+};
 
 class Parser {
 public:

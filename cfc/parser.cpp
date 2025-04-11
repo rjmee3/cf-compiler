@@ -46,7 +46,7 @@ shared_ptr<Expr> Parser::primary() {
       return make_shared<GroupingExpr>(expr);
    }
 
-   throw runtime_error("Unexpected token in expression.");
+   throw ParserException("Expected expression or number.", tokens[current].line, tokens[current].column);
 }
 
 bool Parser::match(TokenType type) {
