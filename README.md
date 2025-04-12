@@ -94,7 +94,7 @@ It is not designed to replace C, but explore what a functional-first systems lan
 ### Phase 1: Seed Compiler - Arithmetic Core (Functional, Typed)
 **Goal:** Build the smallest viable compiler for purely functional expression evaluation with strict typing.
 
-- [ ] **Minimal Grammar**
+- [x] **Minimal Grammar**
   - Support literals and arithmetic ops: `+`, `-`, `*`, `/`
   - Syntax example: `1 + (2 * 3)`
 
